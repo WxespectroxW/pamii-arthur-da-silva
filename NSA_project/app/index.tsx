@@ -50,7 +50,7 @@ export default function Index() {
           </View>
           <View style={styles.row}>
             <Text>Data da situação: </Text>
-            <Text style={styles.bold}>01/01/2021</Text>
+            <Text style={styles.bold}>12/12/1212</Text>
           </View>
         </View>
       </View>
@@ -59,33 +59,33 @@ export default function Index() {
         <View style={{ flexDirection: 'row', flexWrap: 'wrap', padding: 10}}>
           <View>
             <View style={styles.button}>
-              <Image source={require('../assets/images/analytics.svg')} style={{ width: 25, height: 25 }} />
+              {/* <Image source={require('../assets/images/analytics.svg')} style={{ width: 25, height: 25 }} /> */}
               <Text style={{color: 'white', textAlign: 'center'}}>Aulas e Faltas</Text>
             </View>
             <View style={styles.button}>
-              <Image source={require('../assets/images/msg.svg')} style={{ width: 25, height: 25 }} />
+              {/* <Image source={require('../assets/images/msg.svg')} style={{ width: 25, height: 25 }} /> */}
               <Text style={{color: 'white', textAlign: 'center'}}>Mensagens</Text>
             </View>
             <View style={styles.button}>
-              <Image source={require('../assets/images/calendar.svg')} style={{ width: 25, height: 25 }} />
+              {/* <Image source={require('../assets/images/calendar.svg')} style={{ width: 25, height: 25 }} /> */}
               <Text style={{color: 'white', textAlign: 'center'}}>Horários das Aulas</Text>
             </View>
             <View style={styles.button}>
-              <Image source={require('../assets/images/boletim.svg')} style={{ width: 25, height: 25 }} />
+              {/* <Image source={require('../assets/images/boletim.svg')} style={{ width: 25, height: 25 }} /> */}
               <Text style={{color: 'white', textAlign: 'center'}}>Boletim</Text>
             </View>
           </View>
           <View>
             <View style={styles.button}>
-              <Image source={require('../assets/images/entry.svg')} style={{ width: 25, height: 25 }} />
+              {/* <Image source={require('../assets/images/entry.svg')} style={{ width: 25, height: 25 }} /> */}
               <Text style={{color: 'white', textAlign: 'center'}}>Código de Entrada</Text>
             </View>
             <View style={styles.button}>
-              <Image source={require('../assets/images/declaracao.svg')} style={{ width: 25, height: 25 }} />
+              {/* <Image source={require('../assets/images/declaracao.svg')} style={{ width: 25, height: 25 }} /> */}
               <Text style={{color: 'white', textAlign: 'center'}}>Declarações</Text>
             </View>
             <View style={styles.button}>
-              <Image source={require('../assets/images/photo.svg')} style={{ width: 25, height: 25 }} />
+              {/* <Image source={require('../assets/images/photo.svg')} style={{ width: 25, height: 25 }} /> */}
               <Text style={{color: 'white', textAlign: 'center'}}>Foto</Text>
             </View>
           </View>
