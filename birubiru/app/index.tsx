@@ -1,15 +1,40 @@
-import { Text, View } from "react-native";
+import { initializeApp } from "firebase/app";
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/firestore';
+import React, { useEffect, useState } from "react";
+import { Text, View, FlatList } from "react-native";
 
 const TesteAmbiente = {
-  dado_sigiloso: process.env.EXPO_PUBLIC_DADO_SIGILOSO,
-  burno_caon: process.env.EXPO_PUBLIC_BURNO_CAON,
-  careca_excesso: process.env.EXPO_PUBLIC_CARECA_EXCESSO,
-  biruuuu: process.env.EXPO_PUBLIC_BIRUUUU,
-  ratateii: process.env.EXPO_PUBLIC_RATATEII,
-  complicado_mano: process.env.EXPO_PUBLIC_COMPLICADO_MANO
+  apiKey: process.env.EXPO_PUBLIC_DADO_SIGILOSO,
+  authDomain: process.env.EXPO_PUBLIC_BURNO_CAON,
+  projectId: process.env.EXPO_PUBLIC_CARECA_EXCESSO,
+  storageBucket: process.env.EXPO_PUBLIC_BIRUUUU,
+  messagingSenderId: process.env.EXPO_PUBLIC_RATATEII,
+  appId: process.env.EXPO_PUBLIC_COMPLICADO_MANO,
+  measurementId: process.env.EXPO_PUBLIC_MEASUREMENT_ID
 }
 
+const app = initializeApp(TesteAmbiente);
+
 export default function Index() {
+  const [nomes, setNomes] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const nomesCollection = firebase.firestore().collection('Nomes');
+      const snapshot = await nomesCollection.get();
+
+      const data : any = [];
+      snapshot.forEach((doc) => {
+        data.push({ id: doc.id, ...doc.data() });
+      });
+
+      setNomes(data);
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <View
       style={{
